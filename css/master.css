@@ -1,0 +1,164 @@
+.navbar-custom{
+    background-color: #0A71C6;
+}
+
+.socialIcons{
+    height: 20px;
+    width: 20px;
+}
+
+.socialIcons:hover{
+    height: 30px;
+    width: 30px;
+}
+
+#about{  
+    background: #41A4F5;
+    padding-top: 3%;
+}
+
+#profileImage{
+    float: left;
+}
+
+.educationSection{
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.educationImage{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 30px 0;
+}
+
+#techstack{
+    background: #F7F8FA;
+}
+
+.techstackBlock{
+    height: 350px;
+    position: relative;
+}
+
+.techstackCircle{
+    background: #41A4F5;
+    height: 80px;
+    width: 80px;
+    padding-top: 1.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    left: 40%;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+
+.techstackBlock ul li{
+    height: 30px;
+    list-style-image: url(../images/tick.png);
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#contact{
+    background: #41A4F5;
+}
+
+.contactIcons{
+    height: 75px;
+    width: 75px;
+    margin-top: 20px;
+}
+
+.contactIcons:hover{
+    height:90px;
+    width: 90px;
+}
+
+.footer{
+    background: #0A71C6;
+    color: white;
+    padding: 10px 0;
+    font-size: 7.5px;
+}
+
+#back-to-top-button{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+#back-to-top-button:hover, #back-to-top-button:focus{
+    background-color: #333;
+    color: #fff;
+}
+
+.btnEntrance{
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+
+/* Zoom In */
+@keyframes btnEntrance{
+    from{
+        opacity: 0;
+        transform: scale3d(0.3,0.3,0.3);
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.btnExit{
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: btnExit;
+}
+
+/* Zoom Out */
+@keyframes btnExit{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: scale3d(0.3,0.3,0.3);
+    }
+}
+
+
+/* Adjusting the button for smaller device sizes */
+@media(max-width: 992px){
+    #back-to-top-button{
+        font-size: 22px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 768px){
+    #back-to-top-button{
+        font-size: 18px;
+        width: 32px;
+        height: 32px;
+    }
+}
