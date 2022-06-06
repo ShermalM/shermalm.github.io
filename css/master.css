@@ -80,6 +80,14 @@ ul{
     width: 90px;
 }
 
+#email{
+    font-size: 1.5em;
+}
+
+#email:hover{
+    font-size: 1.6em;
+}
+
 .footer{
     background: #0A71C6;
     color: white;
@@ -133,6 +141,7 @@ ul{
     animation-fill-mode: both;
     animation-name: btnExit;
 }
+
 
 /* Zoom Out */
 @keyframes btnExit{
