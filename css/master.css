@@ -46,12 +46,12 @@
     background: #41A4F5;
     height: 80px;
     width: 80px;
-    padding-top: 1.25rem;
     border-radius: 50%;
     position: absolute;
     top: -45px;
     left: 40%;
     display: inline-block;
+    font-size: 50px;
 }
 
 ul{
