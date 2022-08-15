@@ -10,6 +10,8 @@
     <title>Shermals Portfolio</title>
     <script src="https://kit.fontawesome.com/aa35b2498e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/master.css">
+    <script src="https://unpkg.com/vue@3" defer></script>
+    <script src="./js/app.js" defer></script>
   </head>
   <body>
     <button id="back-to-top-button"><i class="fa-solid fa-angles-up"></i></button>
@@ -133,126 +135,26 @@
           </section>
       </div>
 
-      <div id="projects" class="container-fluid bg-white text-center">
+      <section id="projects" class="container-fluid bg-white text-center">
         <h3 class="my-5">Some of my past projects</h3>
-        <div class="row pt-4">   <!-- Row 1 of Projects-->
-          <div class="col-sm-6 col-md-4">
+        <div class="row pt-4">
+          <div class="col-sm-6 col-md-4 pb-4"  v-for="project in projects" :key="project.name">
             <div class="border">
-              <img src="images/onlinefileexplorer.png" alt="onllinefileexplorer" class="img-thumbnail">
+              <img :src="project.imageSrc" :alt="project.imageAlt" class="img-thumbnail">
               <div class="caption">
-                <h3> Online File Explorer</h3>
-                <p> Created a web application using HTML, Bootstrap, and Pure Node.js
-                  <br> Deployed on Heroku PaaS
-                </p>   
+                <h3> {{ project.name }}</h3>
+                <p> {{ project.description }}</p> 
                 <p>
-                  <a href="https://github.com/ShermalM/Online-File-Explorer-Web-App" target="_blank" class="btn btn-outline-info">GitHub</a>
-                  <a href="https://shermals-file-explorer.herokuapp.com/" target="_blank" class="btn btn-outline-info">View Website</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="border">
-              <img src="images/onlinecalculator.png" alt="onllinecalculator" class="img-thumbnail">
-              <div class="caption">
-                <h3> Online Calculator</h3>
-                <p> Created a web application using React</p>   
-                <p>
-                  <a href="https://github.com/ShermalM/Online-Calculator" target="_blank" class="btn btn-outline-info">GitHub</a>
-                  <a href="https://shermalm.github.io/Online-Calculator/" target="_blank" class="btn btn-outline-info">View Website</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="border">
-              <img src="images/stopwatchwebsite.png" alt="stopwatchwebsite" class="img-thumbnail">
-              <div class="caption">
-                <h3> Stopwatch App</h3>
-                <p> Created a web application using HTML, jQuery, and Bootstrap
-                </p>
-                <p>
-                  <a href="https://github.com/ShermalM/Stopwatch-Website" target="_blank" class="btn btn-outline-info">GitHub</a>
-                  <a href="https://shermalm.github.io/Stopwatch-Website/" target="_blank" class="btn btn-outline-info">View Website</a>
+                  <a :href="project.githubLink" target="_blank" class="btn btn-outline-info">GitHub</a>
+                  <a :href="project.projectLink" target="_blank" class="btn btn-outline-info" v-if="project.projectLink">View Website</a>
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="row  pt-4"> <!-- Row 2 of Projects-->
-          <div class="col-sm-6 col-md-4">
-            <div class="border">
-              <img src="images/fruitslicegame.png" alt="fruitslicegame" class="img-thumbnail">
-              <div class="caption">
-                <h3> Fruits Slice Game</h3>
-                <p> Created a web application using HTML, CSS, and jQuery</p>
-                <p>
-                  <a href="https://github.com/ShermalM/Fruit-Slice-Game" target="_blank" class="btn btn-outline-info">GitHub</a>
-                  <a href="https://shermalm.github.io/Fruit-Slice-Game/" target="_blank" class="btn btn-outline-info">View Website</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="border">
-              <img src="images/mathgame.png" alt="mathgame" class="img-thumbnail">
-              <div class="caption">
-                <h3> Math Game</h3>
-                <p> Created a web application using HTML, CSS, and JavaScript</p>
-                <p>
-                  <a href="https://github.com/ShermalM/Math-Game" target="_blank" class="btn btn-outline-info">GitHub</a>
-                  <a href="https://shermalm.github.io/Math-Game/" target="_blank" class="btn btn-outline-info">View Website</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="border">
-              <img src="images/drawingapp.png" alt="drawingapp" class="img-thumbnail">
-              <div class="caption">
-                <h3> Drawing App</h3>
-                <p> Created a web application using HTML, CSS, jQuery, jQuery UI, Canvas, and 
-                  Local Storage
-                </p>
-                <p>
-                  <a href="https://github.com/ShermalM/Drawing-App" target="_blank" class="btn btn-outline-info">GitHub</a>
-                  <a href="https://shermalm.github.io/Drawing-App/" target="_blank" class="btn btn-outline-info">View Website</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row py-4 justify-content-center">   <!-- Row 3 of Projects-->
-          <div class="col-sm-6 col-md-4">
-            <div class="border">
-              <img src="images/project_android_app_whole.png" height="200px" alt="homiesandroidapp" class="img-thumbnail">
-              <div class="caption">
-                <h3> Android Homies App</h3>
-                <p> Worked with a team of four to create an Android Application using Java, XML, and Firebase</p>
-                <p>
-                  <a href="https://github.com/ShermalM/Homies-Android-Application-" target="_blank" class="btn btn-outline-info">GitHub</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="border">
-              <img src="images/project_lock.png" alt="homiessmartlock" class="img-thumbnail">
-              <div class="caption">
-                <h3> Homies Smart Lock (IoT Project)</h3>
-                <p> Worked with a team of four to create a Smart Lock controlled by an Android/iOS mobile app using C, Javascript, 
-                  Node.js, and Blynk IoT Platform
-                </p>
-                <p>
-                  <a href="https://github.com/ShermalM/Homies-Smart-Lock" target="_blank" class="btn btn-outline-info">GitHub</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <div id="contact" class="mt-5 pt-5 pb-3">
+      <section id="contact" class="mt-5 pt-5 pb-3">
         <div class="container-fluid text-center text-dark">
           <div class="row justify-content-center">    
             <div id="contactBox" class="col-md-6">
@@ -277,7 +179,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div class="footer">
         <div class="container-fluid"> 
