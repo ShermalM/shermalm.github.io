@@ -65,6 +65,60 @@ ul{
     padding-top: 20px;
 }
 
+.badge {
+    background-color: #ccc;
+    color: #252525;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.JavaScript {
+    background-color: #F0DB4F;
+    color: #323330;
+}
+
+.jQuery {
+    background-color: #183252;
+    color: white;
+}
+
+.Vue {
+    background-color: #42B883;
+    color: white;
+}
+
+.React {
+    background-color: #61DAFB;
+    color: white;
+}
+
+.Nodejs {
+    background-color: #026E00;
+    color: white;
+}
+
+.MongoDB {
+    background-color: #023430;
+    color: white;
+}
+
+.Bootstrap {
+    background-color: #7611F7;
+    color: white;
+}
+
+.Java {
+    background-color: #4A728E;
+    color: white;
+}
+
+.C {
+    background-color: #1476B4;
+    color: white;
+}
+
 #contact{
     background: #41A4F5;
 }
