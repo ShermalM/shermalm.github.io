@@ -3,12 +3,36 @@ const app = Vue.createApp({
         return {
             projects: [
                 {
+                    name: 'Natours',
+                    description: 'Built a web application and RESTful API using Node.js, following the MVC architecture. Utilized tools and libraries including Express, Mongoose, MongoDB, Stripe, Sendgrid, Pug and more. Hosted on Heroku PaaS.',
+                    imageSrc: 'images/natours.png',
+                    imageAlt: 'natours',
+                    githubLink: 'https://github.com/ShermalM/natours',
+                    projectLink: 'https://shermal-natours.herokuapp.com/',
+                },
+                {
+                    name: 'Find a Coach',
+                    description: 'Created a web application using Vue',
+                    imageSrc: 'images/findacoach.png',
+                    imageAlt: 'findacoach',
+                    githubLink: 'https://github.com/ShermalM/Find-A-Coach',
+                    projectLink: 'https://vue-find-a-coach-3018d.web.app/coaches',
+                },
+                {
                     name: 'Online File Explorer',
                     description: 'Created a web application using HTML, Bootstrap, and Pure Node.js. Deployed on Heroku PaaS',
                     imageSrc: 'images/onlinefileexplorer.png',
                     imageAlt: 'onlinefileexplorer',
                     githubLink: 'https://github.com/ShermalM/Online-File-Explorer-Web-App',
                     projectLink: 'https://shermals-file-explorer.herokuapp.com/',
+                },
+                {
+                    name: 'Monster Slayer Game',
+                    description: 'Created a web application using Vue',
+                    imageSrc: 'images/monsterslayergame.png',
+                    imageAlt: 'monsterslayergame',
+                    githubLink: 'https://github.com/ShermalM/Monster-Slayer-Game',
+                    projectLink: 'https://shermalm.github.io/Monster-Slayer-Game/',
                 },
                 {
                     name: 'Online Calculator',
