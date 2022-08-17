@@ -43,6 +43,15 @@ const app = Vue.createApp({
                     projectLink: 'https://shermals-file-explorer.herokuapp.com/',
                 },
                 {
+                    name: 'Learning Resource Manager',
+                    techStack: ['Vue'],
+                    description: 'Created a web application using Vue',
+                    imageSrc: 'images/learningresourcemanager.png',
+                    imageAlt: 'learningresourcemanager',
+                    githubLink: 'https://github.com/ShermalM/Learning-Resource-Manager',
+                    projectLink: 'https://shermals-learning-resource-manager.netlify.app/',
+                },
+                {
                     name: 'Monster Slayer Game',
                     techStack: ['Vue'],
                     description: 'Created a web application using Vue',
