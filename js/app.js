@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data(){
         return {
-            filters: ['JavaScript', 'jQuery', 'Nodejs', 'Vue', 'React', 'Bootstrap', 'MongoDB', 'Java', 'C'],
+            filters: ['JavaScript', 'jQuery', 'Nodejs', 'Vue', 'React', 'Bootstrap', 'MongoDB', 'Firebase', 'Java', 'C'],
             activeFilters: {
                 JavaScript: false,
                 jQuery: false,
@@ -10,6 +10,7 @@ const app = Vue.createApp({
                 React: false,
                 Bootstrap: false,
                 MongoDB: false,
+                Firebase: false,
                 Java: false,
                 C: false
             },
@@ -18,7 +19,6 @@ const app = Vue.createApp({
                 {
                     name: 'Natours',
                     techStack: ['Nodejs', 'JavaScript', 'MongoDB'],
-                    description: 'Built a web application and RESTful API using Node.js, following the MVC architecture. Utilized tools and libraries including Express, Mongoose, MongoDB, Stripe, Sendgrid, Pug and more. Hosted on Heroku PaaS.',
                     imageSrc: 'images/natours.png',
                     imageAlt: 'natours',
                     githubLink: 'https://github.com/ShermalM/natours',
@@ -26,8 +26,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Find a Coach',
-                    techStack: ['Vue'],
-                    description: 'Created a web application using Vue',
+                    techStack: ['Vue', 'Firebase'],
                     imageSrc: 'images/findacoach.png',
                     imageAlt: 'findacoach',
                     githubLink: 'https://github.com/ShermalM/Find-A-Coach',
@@ -36,7 +35,6 @@ const app = Vue.createApp({
                 {
                     name: 'Online File Explorer',
                     techStack: ['Nodejs', 'Bootstrap'],
-                    description: 'Created a web application using HTML, Bootstrap, and Pure Node.js. Deployed on Heroku PaaS',
                     imageSrc: 'images/onlinefileexplorer.png',
                     imageAlt: 'onlinefileexplorer',
                     githubLink: 'https://github.com/ShermalM/Online-File-Explorer-Web-App',
@@ -45,7 +43,6 @@ const app = Vue.createApp({
                 {
                     name: 'Learning Resource Manager',
                     techStack: ['Vue'],
-                    description: 'Created a web application using Vue',
                     imageSrc: 'images/learningresourcemanager.png',
                     imageAlt: 'learningresourcemanager',
                     githubLink: 'https://github.com/ShermalM/Learning-Resource-Manager',
@@ -54,7 +51,6 @@ const app = Vue.createApp({
                 {
                     name: 'Monster Slayer Game',
                     techStack: ['Vue'],
-                    description: 'Created a web application using Vue',
                     imageSrc: 'images/monsterslayergame.png',
                     imageAlt: 'monsterslayergame',
                     githubLink: 'https://github.com/ShermalM/Monster-Slayer-Game',
@@ -63,7 +59,6 @@ const app = Vue.createApp({
                 {
                     name: 'Online Calculator',
                     techStack: ['React'],
-                    description: 'Created a web application using React',
                     imageSrc: 'images/onlinecalculator.png',
                     imageAlt: 'onlinecalculator',
                     githubLink: 'https://github.com/ShermalM/Online-Calculator',
@@ -72,7 +67,6 @@ const app = Vue.createApp({
                 {
                     name: 'Stopwatch App',
                     techStack: ['jQuery', 'Bootstrap'],
-                    description: 'Created a web application using HTML, jQuery, and Bootstrap',
                     imageSrc: 'images/stopwatchwebsite.png',
                     imageAlt: 'stopwatchwebsite',
                     githubLink: 'https://github.com/ShermalM/Stopwatch-Website',
@@ -81,7 +75,6 @@ const app = Vue.createApp({
                 {
                     name: 'Drawing App',
                     techStack: ['jQuery'],
-                    description: 'Created a web application using HTML, CSS, jQuery, jQuery UI, Canvas, and Local Storage',
                     imageSrc: 'images/drawingapp.png',
                     imageAlt: 'drawingapp',
                     githubLink: 'https://github.com/ShermalM/Drawing-App',
@@ -90,7 +83,6 @@ const app = Vue.createApp({
                 {
                     name: 'Fruits Slice Game',
                     techStack: ['jQuery'],
-                    description: 'Created a web application using HTML, CSS, and jQuery',
                     imageSrc: 'images/fruitslicegame.png',
                     imageAlt: 'fruitslicegame',
                     githubLink: 'https://github.com/ShermalM/Fruit-Slice-Game',
@@ -99,7 +91,6 @@ const app = Vue.createApp({
                 {
                     name: 'Math Game',
                     techStack: ['JavaScript'],
-                    description: 'Created a web application using HTML, CSS, and JavaScript',
                     imageSrc: 'images/mathgame.png',
                     imageAlt: 'mathgame',
                     githubLink: 'https://github.com/ShermalM/Math-Game',
@@ -107,8 +98,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Android Homies App',
-                    techStack: ['Java'],
-                    description: 'Worked with a team of four to create an Android Application using Java, XML, and Firebase',
+                    techStack: ['Java', 'Firebase'],
                     imageSrc: 'images/project_android_app_whole.png',
                     imageAlt: 'homiesandroidapp',
                     githubLink: 'https://github.com/ShermalM/Homies-Android-Application-',
@@ -117,7 +107,6 @@ const app = Vue.createApp({
                 {
                     name: 'Homies Smart Lock (IoT Project)',
                     techStack: ['Nodejs', 'C'],
-                    description: 'Worked with a team of four to create a Smart Lock controlled by an Android/iOS mobile app using C, Javascript, Node.js, and Blynk IoT Platform',
                     imageSrc: 'images/project_lock.png',
                     imageAlt: 'homiessmartlock',
                     githubLink: 'https://github.com/ShermalM/Homies-Smart-Lock',
@@ -164,6 +153,9 @@ const app = Vue.createApp({
                     if(this.activeFilters.MongoDB && project.techStack.includes('MongoDB')){
                         return true;
                     }
+                    if(this.activeFilters.Firebase && project.techStack.includes('Firebase')){
+                        return true;
+                    }
                     if(this.activeFilters.Java && project.techStack.includes('Java')){
                         return true;
                     }
@@ -176,7 +168,7 @@ const app = Vue.createApp({
     },
     watch: {
         activeFilters(value){
-            if(value.JavaScript || value.jQuery || value.Nodejs || value.Vue || value.React || value.Bootstrap || value.MongoDB || value.Java || value.C){
+            if(value.JavaScript || value.jQuery || value.Nodejs || value.Vue || value.React || value.Bootstrap || value.MongoDB || value.Firebase || value.Java || value.C){
                 this.filterOn = true;
             } else{
                 this.filterOn = false;
