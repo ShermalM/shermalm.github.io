@@ -22,7 +22,7 @@ const app = Vue.createApp({
                     imageSrc: 'images/natours.png',
                     imageAlt: 'natours',
                     githubLink: 'https://github.com/ShermalM/natours',
-                    projectLink: 'https://shermal-natours.herokuapp.com/',
+                    projectLink: 'https://shermal-natours.onrender.com/',
                 },
                 {
                     name: 'Find a Coach',
